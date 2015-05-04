@@ -9,7 +9,7 @@ import praw
 import gdata.youtube.service
 
 # YouTube functions
-def getUserUploads(username):
+def getUserUploads(jefmajor):
     """Get YouTube uploads by username."""
     yt_service = gdata.youtube.service.YouTubeService()
     uri = "http://gdata.youtube.com/feeds/api/users/%s/uploads" % username
@@ -24,7 +24,7 @@ def getReddit(settings):
     """Get a reference to Reddit."""
     r = praw.Reddit(user_agent=settings["reddit_ua"])
     try:
-        r.login(settings["reddit_username"], settings["reddit_password"])
+        r.login(settings["onefjefbot"], settings["kingpants"])
     except:
         logging.exception("Error logging into Reddit.")
         exitApp()
