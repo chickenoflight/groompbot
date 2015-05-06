@@ -32,7 +32,7 @@ def getReddit(settings):
 
 def getSubreddit(settings, reddit):
     """Get the subreddit."""
-    return reddit.get_subreddit(settings["reddit_subreddit"])
+    return reddit.get_subreddit(settings["onefjef"])
 
 def submitContent(subreddit, title, link):
     """Submit a link to a subreddit."""
@@ -140,7 +140,7 @@ def runBot():
     logging.info("Getting YouTube videos.")
 
     # Download video list
-    uploads = getUserUploads(settings["youtube_account"]).entry
+    uploads = getUserUploads(settings["jefmajor"]).entry
     newestUpload = uploads[0]
 
     # Reverse from new to old, to old to new
